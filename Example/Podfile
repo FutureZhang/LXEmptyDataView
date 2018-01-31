@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LXEmptyDataView_Example' do
+  pod 'LXEmptyDataView', :path => '../'
+
+  target 'LXEmptyDataView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
