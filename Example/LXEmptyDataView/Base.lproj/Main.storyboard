@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OCe-9d-cZu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,23 +9,55 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="wQg-tq-qST">
+        <!--Navigation Controller-->
+        <scene sceneID="yLn-gV-TLC">
             <objects>
-                <viewController id="whP-gf-Uak" customClass="LXViewController" sceneMemberID="viewController">
+                <navigationController id="OCe-9d-cZu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Jl-6V-7K9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ob8-h7-Z7S" kind="relationship" relationship="rootViewController" id="gQW-PP-9v7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ud-8K-eMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="460"/>
+        </scene>
+        <!--LXEmptyDataView-->
+        <scene sceneID="UgX-hP-xaR">
+            <objects>
+                <viewController id="ob8-h7-Z7S" customClass="LXViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
-                        <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
+                        <viewControllerLayoutGuide type="top" id="fiH-Qu-bdO"/>
+                        <viewControllerLayoutGuide type="bottom" id="r1p-V6-G0V"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
+                    <view key="view" contentMode="scaleToFill" id="LfZ-iw-Oa0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TBv-Hl-xhD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TBv-Hl-xhD" secondAttribute="trailing" id="ZsP-Vo-ghq"/>
+                            <constraint firstItem="TBv-Hl-xhD" firstAttribute="top" secondItem="fiH-Qu-bdO" secondAttribute="bottom" id="iOu-AJ-jO3"/>
+                            <constraint firstItem="r1p-V6-G0V" firstAttribute="top" secondItem="TBv-Hl-xhD" secondAttribute="bottom" id="sqs-Z7-FRP"/>
+                            <constraint firstItem="TBv-Hl-xhD" firstAttribute="leading" secondItem="LfZ-iw-Oa0" secondAttribute="leading" id="wYO-4b-wBJ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="LXEmptyDataView" id="rbK-em-HQV"/>
+                    <connections>
+                        <outlet property="tableview" destination="TBv-Hl-xhD" id="cYg-XF-YcP"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXV-fO-1fN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="842.39999999999998" y="459.22038980509751"/>
         </scene>
     </scenes>
 </document>

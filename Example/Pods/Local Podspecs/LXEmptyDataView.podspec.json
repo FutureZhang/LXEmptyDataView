@@ -1,0 +1,23 @@
+{
+  "name": "LXEmptyDataView",
+  "version": "0.1.0",
+  "summary": "LXEmptyDataView",
+  "description": "LXEmptyDataView, 空数据，加载失败......占位视图UI。",
+  "homepage": "https://github.com/FutureZhang/LXEmptyDataView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "FutureZhang": "18337128698@163.com"
+  },
+  "source": {
+    "git": "https://github.com/FutureZhang/LXEmptyDataView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "LXEmptyDataView/Classes/**/*",
+  "frameworks": "UIKit"
+}
