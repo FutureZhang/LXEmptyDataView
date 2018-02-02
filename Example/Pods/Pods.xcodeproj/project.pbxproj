@@ -35,7 +35,7 @@
 		019D6BA5E0F1B0E30C8AD1614053F3FF /* Pods-LXEmptyDataView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LXEmptyDataView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		01AA4A6A5D9B06799D59466DE98EC4DF /* Pods-LXEmptyDataView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LXEmptyDataView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		065A4A1EC6695DBADA6C30A25786E5E0 /* LXEmptyDataView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LXEmptyDataView-dummy.m"; sourceTree = "<group>"; };
-		0D424D0C06BE8057808D51D6A0F3A425 /* LXEmptyDataView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LXEmptyDataView.framework; path = LXEmptyDataView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D424D0C06BE8057808D51D6A0F3A425 /* LXEmptyDataView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LXEmptyDataView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		103F37BC9F2FD69EEA8DDF9637035CE0 /* Pods-LXEmptyDataView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LXEmptyDataView_Example-dummy.m"; sourceTree = "<group>"; };
 		117E6B8BCD2B008007537A0E65682364 /* Pods-LXEmptyDataView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LXEmptyDataView_Tests-dummy.m"; sourceTree = "<group>"; };
 		1B1A8262C940EAA1A7E1E3C946EDAAB7 /* Pods-LXEmptyDataView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LXEmptyDataView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -44,23 +44,23 @@
 		215BF5EB498D136714444DC98775F6B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22207B01F7D886A82C6F61A5DC378DA5 /* Pods-LXEmptyDataView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LXEmptyDataView_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		2558D3667AC4C89D3B0A3ADD7579C9D4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2816C499607C33D4DBBB8630E5B67CFA /* LXEmptyDataView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LXEmptyDataView.modulemap; sourceTree = "<group>"; };
+		2816C499607C33D4DBBB8630E5B67CFA /* LXEmptyDataView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LXEmptyDataView.modulemap; sourceTree = "<group>"; };
 		2B3372608BE59BD29A1A8B3A8A7CB4AA /* Pods-LXEmptyDataView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LXEmptyDataView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		416B8287683DC341DED5DCD8EEF6C4AB /* Pods-LXEmptyDataView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LXEmptyDataView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		4A5B5CA6818BC870D230B8D0C2403850 /* Pods-LXEmptyDataView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LXEmptyDataView_Example-umbrella.h"; sourceTree = "<group>"; };
 		5AFF377FD662E15A224C5C80E8CEB2F9 /* LXEmptyDataView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LXEmptyDataView.h; sourceTree = "<group>"; };
-		6906D5AD463AD2534A3D647646A25B6A /* Pods-LXEmptyDataView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LXEmptyDataView_Example.modulemap"; sourceTree = "<group>"; };
+		6906D5AD463AD2534A3D647646A25B6A /* Pods-LXEmptyDataView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LXEmptyDataView_Example.modulemap"; sourceTree = "<group>"; };
 		7C4C0D6FE38ED5C1D7620B6034A20E73 /* LXEmptyDataView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LXEmptyDataView-prefix.pch"; sourceTree = "<group>"; };
-		80F03332B0C6B9D710AD4F903D079720 /* Pods-LXEmptyDataView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LXEmptyDataView_Tests.modulemap"; sourceTree = "<group>"; };
+		80F03332B0C6B9D710AD4F903D079720 /* Pods-LXEmptyDataView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LXEmptyDataView_Tests.modulemap"; sourceTree = "<group>"; };
 		88BC7B3BCE8F8EBB9F4EF209C60CE7D3 /* Pods-LXEmptyDataView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LXEmptyDataView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A4A9A1387112A4C71D8D7FB41E3BB779 /* Pods_LXEmptyDataView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LXEmptyDataView_Tests.framework; path = "Pods-LXEmptyDataView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4A9A1387112A4C71D8D7FB41E3BB779 /* Pods_LXEmptyDataView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LXEmptyDataView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DC952316962549E79B47F45925A8F6 /* Pods-LXEmptyDataView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LXEmptyDataView_Example-resources.sh"; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		BBF54B91AFF7888D30CA004112B4FB33 /* Pods-LXEmptyDataView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LXEmptyDataView_Tests-resources.sh"; sourceTree = "<group>"; };
 		C2C79E84653F9367334D921A2DD733DC /* Pods-LXEmptyDataView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LXEmptyDataView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2F276488583C5E87B747CEFADA867CC /* LXEmptyDataView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LXEmptyDataView.m; sourceTree = "<group>"; };
-		CAC87DE4375057922F5055871EDE82F4 /* Pods_LXEmptyDataView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LXEmptyDataView_Example.framework; path = "Pods-LXEmptyDataView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAC87DE4375057922F5055871EDE82F4 /* Pods_LXEmptyDataView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LXEmptyDataView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F4A9433A537AF15961FD1A023A78CD /* Pods-LXEmptyDataView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LXEmptyDataView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F0AA9590C46B65B6255387682A2D26ED /* LXEmptyDataView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LXEmptyDataView.xcconfig; sourceTree = "<group>"; };
@@ -167,7 +167,6 @@
 			children = (
 				BE8649723F3F87E8D8B6AB27EF42156C /* Classes */,
 			);
-			name = LXEmptyDataView;
 			path = LXEmptyDataView;
 			sourceTree = "<group>";
 		};
@@ -199,7 +198,6 @@
 				5AFF377FD662E15A224C5C80E8CEB2F9 /* LXEmptyDataView.h */,
 				C2F276488583C5E87B747CEFADA867CC /* LXEmptyDataView.m */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -410,7 +408,7 @@
 				PRODUCT_NAME = Pods_LXEmptyDataView_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -446,7 +444,7 @@
 				PRODUCT_NAME = Pods_LXEmptyDataView_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -479,7 +477,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -515,7 +513,7 @@
 				PRODUCT_NAME = Pods_LXEmptyDataView_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -548,7 +546,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -584,7 +582,7 @@
 				PRODUCT_NAME = Pods_LXEmptyDataView_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
