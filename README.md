@@ -1,29 +1,26 @@
 # LXEmptyDataView
-##iOS开发中，当UITableView、UICollectionView、UIView等出现空数据、加载失败时等等的占位视图UI界面。
 
 [![CI Status](http://img.shields.io/travis/FutureZhang/LXEmptyDataView.svg?style=flat)](https://travis-ci.org/FutureZhang/LXEmptyDataView)
 [![Version](https://img.shields.io/cocoapods/v/LXEmptyDataView.svg?style=flat)](http://cocoapods.org/pods/LXEmptyDataView)
 [![License](https://img.shields.io/cocoapods/l/LXEmptyDataView.svg?style=flat)](http://cocoapods.org/pods/LXEmptyDataView)
 [![Platform](https://img.shields.io/cocoapods/p/LXEmptyDataView.svg?style=flat)](http://cocoapods.org/pods/LXEmptyDataView)
 
-## Example
+# iOS开发中，当UITableView、UICollectionView、UIView等出现空数据、加载失败时等的占位图UI。
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-LXEmptyDataView is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
+## 集成
+1.Cocoapods方式集成: 
 ```ruby
 pod 'LXEmptyDataView'
 ```
+```
+使用时导入头文件 #import <LXEmptyDataView/LXEmptyDataView.h> 
+```
 
-## Author
-
-FutureZhang, 18337128698@163.com
+2.手动下载集成: 
+```
+直接将LXEmptyDataView.h和LXEmptyDataView.m两个文件复制到你的工程中
+使用时导入头文件：#import "LXEmptyDataView.h"
+```
 
 ## License
 
