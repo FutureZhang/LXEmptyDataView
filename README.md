@@ -1,4 +1,5 @@
 # LXEmptyDataView
+##iOS开发中，当UITableView、UICollectionView、UIView等出现空数据、加载失败时等等的占位视图UI界面。
 
 [![CI Status](http://img.shields.io/travis/FutureZhang/LXEmptyDataView.svg?style=flat)](https://travis-ci.org/FutureZhang/LXEmptyDataView)
 [![Version](https://img.shields.io/cocoapods/v/LXEmptyDataView.svg?style=flat)](http://cocoapods.org/pods/LXEmptyDataView)
