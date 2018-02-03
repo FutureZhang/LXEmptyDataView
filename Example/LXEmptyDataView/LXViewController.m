@@ -24,7 +24,8 @@ static NSString * const cellId = @"cellId";
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.dataArray = @[@"【UITableView】",@"【UICollectionView】",@"【UIView】"];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+    self.dataArray = @[@"【UITableView】中使用",@"【UICollectionView】中使用",@"【UIView】中使用"];
     self.tableview.dataSource = self;
     self.tableview.delegate = self;
     self.tableview.tableFooterView = [UIView new];
@@ -45,6 +46,7 @@ static NSString * const cellId = @"cellId";
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
+    cell.textLabel.textColor = UIColorFromRGBValue(0X1296db);
     cell.textLabel.text = self.dataArray[indexPath.row];
     return cell;
 }
@@ -56,10 +58,10 @@ static NSString * const cellId = @"cellId";
     if (indexPath.row == 1) {
         //初始化layout
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        layout.minimumInteritemSpacing = 10;
+        layout.minimumInteritemSpacing = 1;
         layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
-        layout.minimumLineSpacing = 10;
-        layout.itemSize = CGSizeMake(100, 100);
+        layout.minimumLineSpacing = 1;
+        layout.itemSize = CGSizeMake((self.view.frame.size.width-4)/4, self.view.frame.size.width/6);
         LXCollectionViewController *VC = [[LXCollectionViewController alloc] initWithCollectionViewLayout:layout];
         VC.collectionView.collectionViewLayout = layout;
         [self.navigationController pushViewController:VC animated:YES];

@@ -12,7 +12,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    //导航栏的半透明效果
+    [UINavigationBar appearance].translucent = NO;
+    //导航返回按钮的颜色
+    [[UINavigationBar appearance] setTintColor:UIColorFromRGBValue(0X1296db)];
+    //导航栏Title的字体、颜色...
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:UIColorFromRGBValue(0X1296db),NSForegroundColorAttributeName, nil]];
+    //导航栏左右Item的字体、颜色...
+    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:UIColorFromRGBValue(0X1296db),NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
     return YES;
 }
 

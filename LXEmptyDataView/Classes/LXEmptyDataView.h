@@ -10,19 +10,22 @@
 #import <UIKit/UIKit.h>
 
 typedef void(^LXTouchButtonBlock)(void);
+typedef void(^LXTouchRightButtonBlock)(void);
 typedef void(^LXTouchAllViewBlock)(void);
 
 @interface LXEmptyDataView : UICollectionReusableView
 //imageView图片
 @property(nonatomic, strong) UIImage *image;
 //rightLabel文字内容
-@property(nonatomic, strong) NSAttributedString *right;
+@property(nonatomic, strong) NSAttributedString *rightTitle;
 //titleLabel文字内容
 @property(nonatomic, strong) NSAttributedString *title;
 //detailLabel文字内容
 @property(nonatomic, strong) NSAttributedString *detail;
 //button文字内容
 @property(nonatomic, strong) NSAttributedString *buttonTitle;
+//rightButton文字内容
+@property(nonatomic, strong) NSAttributedString *rightButtonTitle;
 //button背景颜色
 @property(nonatomic, strong) UIColor *buttonBgColor;
 //button是否设置圆角
@@ -31,7 +34,9 @@ typedef void(^LXTouchAllViewBlock)(void);
 @property(nonatomic, strong) UIColor *buttonBorderColor;
 //button点击事件block
 @property(nonatomic, copy) LXTouchButtonBlock touchButtonBlock;
-//image点击事件block
+//rightButton点击事件block
+@property(nonatomic, copy) LXTouchRightButtonBlock touchRightButtonBlock;
+//整个LXEmptyDataView点击事件block
 @property(nonatomic, copy) LXTouchAllViewBlock touchAllViewBlock;
 /**
  重置子控件

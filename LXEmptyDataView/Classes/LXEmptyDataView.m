@@ -13,7 +13,7 @@
 #define LX_VerticalOffset (self.frame.size.height/8)
 
 static CGFloat const LX_LeftMargin = 10.0;
-static CGFloat const LX_TopMargin = 20.0;
+static CGFloat const LX_TopMargin  = 20.0;
 static CGFloat const LX_ButtonHeight = 30.0;
 
 @interface LXEmptyDataView()
@@ -22,17 +22,10 @@ static CGFloat const LX_ButtonHeight = 30.0;
 @property(nonatomic, strong) UILabel *titleLabel;
 @property(nonatomic, strong) UILabel *detailLabel;
 @property(nonatomic, strong) UIButton *button;
+@property(nonatomic, strong) UIButton *rightButton;
 @end
 
 @implementation LXEmptyDataView
-
-/**
- LXEmptyView 初始化
- @return LXEmptyView
- */
-- (instancetype)init{
-    return [self initWithFrame:[UIScreen mainScreen].bounds];
-}
 
 /**
  LXEmptyView 初始化
@@ -72,7 +65,6 @@ static CGFloat const LX_ButtonHeight = 30.0;
     if (!_rightLabel) {
         _rightLabel = [[UILabel alloc] init];
         _rightLabel.backgroundColor = [UIColor clearColor];
-        _rightLabel.userInteractionEnabled = YES;
         _rightLabel.font = [UIFont systemFontOfSize:15.0];
         _rightLabel.textColor = [UIColor grayColor];
         _rightLabel.textAlignment = NSTextAlignmentLeft;
@@ -90,11 +82,9 @@ static CGFloat const LX_ButtonHeight = 30.0;
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.backgroundColor = [UIColor clearColor];
-        _titleLabel.userInteractionEnabled = YES;
         _titleLabel.font = [UIFont systemFontOfSize:15.0];
         _titleLabel.textColor = [UIColor grayColor];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
         _titleLabel.numberOfLines = 0;
         [self addSubview:_titleLabel];
     }
@@ -109,11 +99,9 @@ static CGFloat const LX_ButtonHeight = 30.0;
     if (!_detailLabel) {
         _detailLabel = [[UILabel alloc] init];
         _detailLabel.backgroundColor = [UIColor clearColor];
-        _detailLabel.userInteractionEnabled = YES;
         _detailLabel.font = [UIFont systemFontOfSize:15.0];
         _detailLabel.textColor = [UIColor grayColor];
         _detailLabel.textAlignment = NSTextAlignmentCenter;
-        _detailLabel.lineBreakMode = NSLineBreakByTruncatingTail;
         _detailLabel.numberOfLines = 0;
         [self addSubview:_detailLabel];
     }
@@ -130,12 +118,24 @@ static CGFloat const LX_ButtonHeight = 30.0;
         _button.backgroundColor = [UIColor clearColor];
         _button.titleLabel.font = [UIFont systemFontOfSize:15.0];
         _button.titleLabel.textColor = [UIColor grayColor];
-        _button.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-        //button点击事件
+        
         [_button addTarget:self action:@selector(touchButton:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_button];
     }
     return _button;
+}
+
+- (UIButton *)rightButton{
+    if (!_rightButton) {
+        _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _rightButton.backgroundColor = [UIColor clearColor];
+        _rightButton.titleLabel.font = [UIFont systemFontOfSize:15.0];
+        _rightButton.titleLabel.textColor = [UIColor grayColor];
+        
+        [_rightButton addTarget:self action:@selector(touchRightButton:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:_rightButton];
+    }
+    return _rightButton;
 }
 
 - (void)setImage:(UIImage *)image{
@@ -144,9 +144,9 @@ static CGFloat const LX_ButtonHeight = 30.0;
     [self setSubViewsFrame];
 }
 
-- (void)setRight:(NSAttributedString *)right{
-    _right = right;
-    self.rightLabel.attributedText = _right;
+- (void)setRightTitle:(NSAttributedString *)rightTitle{
+    _rightTitle = rightTitle;
+    self.rightLabel.attributedText = _rightTitle;
     [self setSubViewsFrame];
 }
 
@@ -168,20 +168,32 @@ static CGFloat const LX_ButtonHeight = 30.0;
     [self setSubViewsFrame];
 }
 
+- (void)setRightButtonTitle:(NSAttributedString *)rightButtonTitle{
+    _rightButtonTitle = rightButtonTitle;
+    [self.rightButton setAttributedTitle:_rightButtonTitle forState:UIControlStateNormal];
+    [self setSubViewsFrame];
+}
+
 - (void)setButtonBgColor:(UIColor *)buttonBgColor{
     _buttonBgColor = buttonBgColor;
     self.button.backgroundColor = _buttonBgColor;
+    self.rightButton.backgroundColor = _buttonBgColor;
 }
 
 - (void)setButtonBorderColor:(UIColor *)buttonBorderColor{
     _buttonBorderColor = buttonBorderColor;
     self.button.layer.borderColor = _buttonBorderColor.CGColor;
+    self.rightButton.layer.borderColor = _buttonBorderColor.CGColor;
     if (_buttonBorderColor) {
         self.button.layer.masksToBounds = YES;
         self.button.layer.borderWidth = 1;
+        self.rightButton.layer.masksToBounds = YES;
+        self.rightButton.layer.borderWidth = 1;
     }else{
         self.button.layer.masksToBounds = NO;
         self.button.layer.borderWidth = 0;
+        self.rightButton.layer.masksToBounds = NO;
+        self.rightButton.layer.borderWidth = 0;
     }
 }
 
@@ -189,8 +201,10 @@ static CGFloat const LX_ButtonHeight = 30.0;
     _buttonCornerRadius = buttonCornerRadius;
     if (_buttonCornerRadius) {
         self.button.layer.cornerRadius = LX_ButtonHeight/2;
+        self.rightButton.layer.cornerRadius = LX_ButtonHeight/2;
     }else{
         self.button.layer.cornerRadius = 0;
+        self.rightButton.layer.cornerRadius = 0;
     }
 }
 
@@ -199,12 +213,12 @@ static CGFloat const LX_ButtonHeight = 30.0;
  */
 - (void)setSubViewsFrame{
     if (_image) {
-        _imageView.frame = CGRectMake((_right.length>0?(LX_Width/2-_image.size.width):(LX_Width-_image.size.width)/2), LX_VerticalOffset, _image.size.width, _image.size.height);
+        _imageView.frame = CGRectMake((_rightTitle.length>0?(LX_Width/2-_image.size.width):(LX_Width-_image.size.width)/2), LX_VerticalOffset, _image.size.width, _image.size.height);
     }
     
-    if (_right) {
+    if (_rightTitle) {
         if (_image) {
-            _rightLabel.frame = CGRectMake(LX_Width/2 + LX_LeftMargin, _imageView.center.y-LX_ButtonHeight/2, LX_Width/2 - LX_LeftMargin*2, (_right.length>0?LX_ButtonHeight:0));
+            _rightLabel.frame = CGRectMake(LX_Width/2 + LX_LeftMargin, _imageView.center.y-LX_ButtonHeight/2, LX_Width/2 - LX_LeftMargin*2, (_rightTitle.length>0?LX_ButtonHeight:0));
         }
     }
     
@@ -220,8 +234,21 @@ static CGFloat const LX_ButtonHeight = 30.0;
     
     if (_buttonTitle) {
         CGFloat buttonWidth = [_buttonTitle lx_calculateTextWidthWithHeight:LX_ButtonHeight] + 40;
-        buttonWidth = buttonWidth>(LX_Width -LX_LeftMargin*2)?(LX_Width -LX_LeftMargin*2):buttonWidth;
-        _button.frame = CGRectMake((LX_Width - buttonWidth)/2, (_imageView.frame.size.height>0?(_imageView.frame.origin.y + _imageView.frame.size.height + LX_TopMargin):LX_VerticalOffset) + (_titleLabel.frame.size.height>0?(_titleLabel.frame.size.height + LX_TopMargin):0) + (_detailLabel.frame.size.height>0?(_detailLabel.frame.size.height + LX_TopMargin):0), buttonWidth, (_buttonTitle.length>0?LX_ButtonHeight:0));
+        if (buttonWidth > (LX_Width - LX_LeftMargin*2)) {
+            buttonWidth = LX_Width - LX_LeftMargin*2;
+        }
+        if (_rightButtonTitle&&(buttonWidth > (LX_Width/2 - LX_LeftMargin*2))) {
+            buttonWidth = LX_Width/2 - LX_LeftMargin*2;
+        }
+        _button.frame = CGRectMake(_rightButtonTitle?(LX_Width/2 - buttonWidth - LX_LeftMargin):(LX_Width - buttonWidth)/2, (_imageView.frame.size.height>0?(_imageView.frame.origin.y + _imageView.frame.size.height + LX_TopMargin):LX_VerticalOffset) + (_titleLabel.frame.size.height>0?(_titleLabel.frame.size.height + LX_TopMargin):0) + (_detailLabel.frame.size.height>0?(_detailLabel.frame.size.height + LX_TopMargin):0), buttonWidth, (_buttonTitle.length>0?LX_ButtonHeight:0));
+    }
+    
+    if (_buttonTitle&&_rightButtonTitle) {
+        CGFloat rightButtonWidth = [_rightButtonTitle lx_calculateTextWidthWithHeight:LX_ButtonHeight] + 40;
+        if (rightButtonWidth > (LX_Width/2 - LX_LeftMargin*2)) {
+            rightButtonWidth = LX_Width/2 - LX_LeftMargin*2;
+        }
+        _rightButton.frame = CGRectMake(LX_Width/2 + LX_LeftMargin, _button.frame.origin.y, rightButtonWidth, (_rightButtonTitle.length>0?LX_ButtonHeight:0));
     }
 }
 
@@ -234,12 +261,14 @@ static CGFloat const LX_ButtonHeight = 30.0;
     _titleLabel = nil;
     _detailLabel = nil;
     _button = nil;
+    _rightButton = nil;
     
     _image = nil;
-    _right = nil;
+    _rightTitle = nil;
     _title = nil;
     _detail = nil;
     _buttonTitle = nil;
+    _rightButtonTitle = nil;
     _buttonBgColor = nil;
     _buttonBorderColor = nil;
     _buttonCornerRadius = NO;
@@ -261,6 +290,16 @@ static CGFloat const LX_ButtonHeight = 30.0;
 - (void)touchButton:(id)sender{
     if (_touchButtonBlock) {
         _touchButtonBlock();
+    }
+}
+
+/**
+ rightButton 点击事件
+ @param sender id
+ */
+- (void)touchRightButton:(id)sender{
+    if (_touchRightButtonBlock) {
+        _touchRightButtonBlock();
     }
 }
 

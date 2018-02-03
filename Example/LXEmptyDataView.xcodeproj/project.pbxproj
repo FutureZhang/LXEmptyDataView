@@ -75,6 +75,7 @@
 		8CBC168A2021A8D900B94A00 /* LXCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXCollectionViewController.xib; sourceTree = "<group>"; };
 		8CBC168D2021B4F100B94A00 /* LXEmptyDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXEmptyDataViewController.h; sourceTree = "<group>"; };
 		8CBC168E2021B4F100B94A00 /* LXEmptyDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXEmptyDataViewController.m; sourceTree = "<group>"; };
+		8CE840922025852A00FEB323 /* LXConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXConstant.h; sourceTree = "<group>"; };
 		D3426EEC8A0C174CE8C5D1B2 /* Pods-LXEmptyDataView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXEmptyDataView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LXEmptyDataView_Tests/Pods-LXEmptyDataView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC2C358D0E842FE7BED7141D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E275F4CB62A4DE9E5328E931 /* Pods_LXEmptyDataView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LXEmptyDataView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +158,7 @@
 				8CBC168A2021A8D900B94A00 /* LXCollectionViewController.xib */,
 				8CBC168D2021B4F100B94A00 /* LXEmptyDataViewController.h */,
 				8CBC168E2021B4F100B94A00 /* LXEmptyDataViewController.m */,
+				8CE840922025852A00FEB323 /* LXConstant.h */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,

@@ -18,11 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.tableFooterView = [UIView new];
-    
-    self.status = 1;
-    
+    self.navigationItem.title = @"UITableView";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStyleDone target:self action:@selector(refresh)];
+    self.tableView.tableFooterView = [UIView new];
+    self.status = 1;
 }
 
 - (void)refresh{
@@ -54,7 +53,7 @@
     if (self.status == 1||self.status == 2||self.status == 3) {
         return 1;
     }
-    return 3;
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -65,7 +64,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellId = @"cellId";
+    static NSString * const cellId = @"cellId";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
@@ -90,22 +89,21 @@
     LXEmptyDataView *emptyDataView = [[LXEmptyDataView alloc] initWithFrame:self.tableView.frame];
     if (self.status == 1) {
         emptyDataView.image = [UIImage imageNamed:@"ic_empty_data"];
-        emptyDataView.title = [NSAttributedString lx_attributedString:@"暂无数据" color:[UIColor grayColor] font:[UIFont systemFontOfSize:15.0]];
+        emptyDataView.title = [NSAttributedString lx_attributedString:@"暂无数据" color:UIColorFromRGBValue(0Xcccccc) font:LXSystemFont15];
     }
     if (self.status == 2) {
         emptyDataView.image = [UIImage imageNamed:@"ic_loading_error"];
-        emptyDataView.title = [NSAttributedString lx_attributedString:@"加载失败" color:[UIColor grayColor] font:[UIFont systemFontOfSize:15.0]];
+        emptyDataView.title = [NSAttributedString lx_attributedString:@"加载失败" color:UIColorFromRGBValue(0Xcccccc) font:LXSystemFont15];
     }
     if (self.status == 3) {
         emptyDataView.image = [UIImage imageNamed:@"ic_loading_error"];
-        emptyDataView.title = [NSAttributedString lx_attributedString:@"加载失败" color:[UIColor grayColor] font:[UIFont systemFontOfSize:15.0]];
-        emptyDataView.buttonTitle = [NSAttributedString lx_attributedString:@"重新加载" color:[UIColor blueColor] font:[UIFont systemFontOfSize:15.0]];
-        emptyDataView.buttonBorderColor = [UIColor blueColor];
+        emptyDataView.title = [NSAttributedString lx_attributedString:@"加载失败" color:UIColorFromRGBValue(0Xcccccc) font:LXSystemFont15];
+        emptyDataView.buttonTitle = [NSAttributedString lx_attributedString:@"重新加载" color:UIColorFromRGBValue(0X1296db) font:LXSystemFont15];
+        emptyDataView.buttonBorderColor = UIColorFromRGBValue(0X1296db);
         emptyDataView.touchButtonBlock = ^{
             [self refresh];
         };
     }
-    
     emptyDataView.touchAllViewBlock = ^{
         [self refresh];
     };
