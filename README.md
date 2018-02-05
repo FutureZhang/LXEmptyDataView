@@ -1,13 +1,12 @@
 # LXEmptyDataView
 
-## iOS中界面出现空白页（暂无数据、加载失败......）时的占位图。
-
-## 支持所有View，例如：UITableView、UICollectionView、UIView等。
-
 [![Build Status](https://travis-ci.org/FutureZhang/LXEmptyDataView.svg?branch=master)](https://travis-ci.org/FutureZhang/LXEmptyDataView)
 [![Version](https://img.shields.io/cocoapods/v/LXEmptyDataView.svg?style=flat)](http://cocoapods.org/pods/LXEmptyDataView)
 [![License](https://img.shields.io/cocoapods/l/LXEmptyDataView.svg?style=flat)](http://cocoapods.org/pods/LXEmptyDataView)
 [![Platform](https://img.shields.io/cocoapods/p/LXEmptyDataView.svg?style=flat)](http://cocoapods.org/pods/LXEmptyDataView)
+
+## iOS中界面出现空白页（暂无数据、加载失败......）时的占位图。
+## 支持所有View，例如：UITableView、UICollectionView、UIView等。
 
 ## 一. 效果图展示
 
@@ -29,7 +28,7 @@ pod 'LXEmptyDataView'
 使用时导入头文件：#import "LXEmptyDataView.h"
 ```
 
-## 三. 示例代码
+## 三. 示例代码（详细示例代码请查看项目demo）
 
 ### 1. UITableView使用
 
@@ -58,7 +57,7 @@ LXEmptyDataView作为UITableView的Section Footer(组头)或Section Header(组�
 
 ### 2. UICollectionView使用
 
-![UITableView preview](https://github.com/FutureZhang/LXEmptyDataView/blob/master/SampleImage/3.png)
+![UITableView preview](https://github.com/FutureZhang/LXEmptyDataView/blob/master/SampleImage/9.png)
 
 LXEmptyDataView作为UICollectionView的Section Footer(组头)或Section Header(组尾)使用
 
