@@ -7,7 +7,11 @@
 
 ## iOS开发中，当UITableView、UICollectionView、UIView等出现空数据、加载失败......时的占位图UI。
 
-## 集成方式
+## 一 效果图展示
+
+![preview](https://github.com/FutureZhang/LXEmptyDataView/blob/master/SampleImage/preview.png)
+
+## 二 集成方式
 
 1. Cocoapods方式集成: 
 ```
